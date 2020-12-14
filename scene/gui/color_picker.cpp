@@ -74,6 +74,7 @@ void ColorPicker::_notification(int p_what) {
 			if (p) {
 				p->set_size(Size2(get_combined_minimum_size().width + get_theme_constant("margin") * 2, get_combined_minimum_size().height + get_theme_constant("margin") * 2));
 			}
+			Input::get_singleton()->set_mouse_mode(Input::MOUSE_MODE_VISIBLE);
 		} break;
 		case NOTIFICATION_WM_CLOSE_REQUEST: {
 			if (screen != nullptr && screen->is_visible()) {
@@ -928,6 +929,7 @@ void ColorPickerButton::_notification(int p_what) {
 	}
 
 	if (p_what == NOTIFICATION_VISIBILITY_CHANGED) {
+		Input::get_singleton()->set_mouse_mode(Input::MOUSE_MODE_VISIBLE);
 		if (popup && !is_visible_in_tree()) {
 			popup->hide();
 		}
