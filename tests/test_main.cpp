@@ -52,6 +52,7 @@
 #include "test_string.h"
 #include "test_validate_testing.h"
 #include "test_variant.h"
+#include "test_object.h"
 
 #include "modules/modules_tests.gen.h"
 
